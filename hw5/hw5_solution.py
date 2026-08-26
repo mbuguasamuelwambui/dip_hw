@@ -1,12 +1,24 @@
 import os
 import sys
+import time
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-# Add common directory to sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from common.benchmark import compute_mse, benchmark_timer, plot_4panel_comparison
+# =====================================================================
+# BENCHMARK & COMPARISON HELPERS
+# =====================================================================
+def compute_mse(img1: np.ndarray, img2: np.ndarray) -> float:
+    """Computes Mean Squared Error between two images."""
+    diff = img1.astype(np.float64) - img2.astype(np.float64)
+    return float(np.mean(diff ** 2))
+
+def benchmark_timer(func, *args, **kwargs):
+    """Executes func and returns (result, elapsed_ms)."""
+    t0 = time.perf_counter()
+    res = func(*args, **kwargs)
+    t1 = time.perf_counter()
+    return res, (t1 - t0) * 1000.0
 
 # =====================================================================
 # TASK 1: 1D DFT, RADIX-2 1D FFT, AND 2D SEPARABLE TRANSFORMS

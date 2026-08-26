@@ -5,7 +5,7 @@ This repository contains complete, verified Python implementations and comprehen
 Every algorithm in Homeworks 2 through 6 has been implemented **twice**:
 1. **From Scratch**: Using pure NumPy array operations, explicit loops, and mathematical formulations without high-level library shortcuts.
 2. **Library Standard**: Using OpenCV (`cv2`), SciPy, and Scikit-Image.
-3. **Benchmarked**: Validated via Mean Squared Error ($\text{MSE}$), Structural Similarity Index ($\text{SSIM}$), high-precision execution timings (`time.perf_counter()`), and 4-panel visual comparison grids.
+3. **Benchmarked**: Validated via Mean Squared Error ($\text{MSE}$), Structural Similarity Index ($\text{SSIM}$), high-precision execution timings (`time.perf_counter()`), and multi-panel visual comparison grids.
 
 ---
 
@@ -13,9 +13,6 @@ Every algorithm in Homeworks 2 through 6 has been implemented **twice**:
 
 ```text
 hw/
-├── common/
-│   └── benchmark.py                    <- Shared MSE, execution timer, and 4-panel plot generator
-│
 ├── hw1/                                <- Image Basics & Pixel Operations
 │   ├── hw1_solution.py                 <- Executable solution script
 │   ├── HW1_Report.md                   <- Comprehensive theoretical and visual report
