@@ -9,7 +9,7 @@
 ## 1. Image Metadata Inspection (Question 1)
 
 ### Theoretical & Implementation Overview
-Digital images stored in standard uncompressed formats (such as 24-bit Windows Bitmap `.bmp`) are represented as 3D arrays of shape $(H, W, C)$ with element data type unsigned 8-bit integer (`uint8`), corresponding to dynamic range $[0, 255]$.
+Digital images stored in standard uncompressed formats 
 In OpenCV, image arrays follow the **BGR** (Blue, Green, Red) channel ordering rather than **RGB**.
 
 ### Extracted Properties
