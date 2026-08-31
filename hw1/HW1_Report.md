@@ -75,7 +75,7 @@ Understanding color representations is fundamental in computer vision and image 
 
 ---
 
-### 3. CIELAB Color Space ($L^*, a^*, b^*$)
+### 3. CIELAB Color Space (L, a, b)
 * **Perceptual Uniformity**: Designed so that a Euclidean distance $\Delta E = \sqrt{(\Delta L^*)^2 + (\Delta a^*)^2 + (\Delta b^*)^2}$ directly corresponds to human visual perceived color difference.
 * **$L^*$ (Lightness, $0 \dots 255$)**:
   * Closely matches the non-linear human visual perception of luminance (achromatic channel).
