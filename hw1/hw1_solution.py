@@ -18,9 +18,8 @@ def main():
     print("Homework 1: Image Basics and Pixel Operations")
     print("=" * 60)
 
-    # -------------------------------------------------------------
     # Question 1: Load, inspect metadata, and save
-    # -------------------------------------------------------------
+    
     print("\n--- Question 1: Image Metadata Inspection ---")
     img_bgr = cv2.imread(input_path)
     if img_bgr is None:
@@ -47,9 +46,8 @@ def main():
     cv2.imwrite(q1_path, img_bgr)
     print(f"Saved: {q1_path}")
 
-    # -------------------------------------------------------------
     # Question 2: Draw solid red vertical line at center column x = W // 2
-    # -------------------------------------------------------------
+    
     print("\n--- Question 2: Red Center Line ---")
     img_q2 = img_bgr.copy()
     center_x = width // 2  # 512 // 2 = 256
@@ -61,9 +59,7 @@ def main():
     print(f"Drawn red vertical line at column x = {center_x}")
     print(f"Saved: {q2_path}")
 
-    # -------------------------------------------------------------
     # Question 3: Draw blue line of thickness 2 from (100,100) to (200,200)
-    # -------------------------------------------------------------
     print("\n--- Question 3: Blue Line (thickness 2) ---")
     img_q3 = img_q2.copy()
     # In OpenCV, cv2.line uses (x, y) coordinates. Blue in BGR is (255, 0, 0)
@@ -75,9 +71,9 @@ def main():
     print("Drawn blue line of thickness 2 from (100, 100) to (200, 200)")
     print(f"Saved: {q3_path}")
 
-    # -------------------------------------------------------------
+    
     # Question 4: Solid green rectangle top-left (50,50) to bottom-right (100,100) inclusive
-    # -------------------------------------------------------------
+    
     print("\n--- Question 4: Green Rectangle via Direct Array Assignment ---")
     img_q4 = img_q3.copy()
     # Inclusive range [50, 100] means slice 50:101 for rows (y) and cols (x)
@@ -113,9 +109,9 @@ def main():
     plt.close()
     print(f"Saved summary comparison plot: {q1_4_plot_path}")
 
-    # -------------------------------------------------------------
+    
     # Question 5: Color Space Decompositions & Channel Visualizations
-    # -------------------------------------------------------------
+    
     print("\n--- Question 5: Color Spaces (RGB, HSV, CIELAB, YCrCb) ---")
     
     # 1. RGB Decomposition
